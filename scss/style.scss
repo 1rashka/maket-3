@@ -13,9 +13,10 @@ body{
 }
 
 header{
-    background: url(../img/Bitmap.png) 50% 50% no-repeat;
+    background: url('../img/Bitmap.png') 50% 50% no-repeat;
     background-size: cover;
     position: relative;
+    
     min-height: 100vh;
     &::before{
         content:'';
@@ -54,19 +55,27 @@ header{
         .header-content{
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
             
 
             .header-text{
+                
             color: #ffffff;
+            display: flex;
+            min-height: 20vh;
             text-align: center;
-            margin: 25% 0 0 0;
+            flex-direction: column;
+            justify-content: space-around;
+            
+            
 
             .title{    
             font-size: 55px;
             font-weight: 700;
-            margin: 0 0 1% 0 ;
+            line-height: 70px;
             letter-spacing:5px ;
-            color: #ffffff;
+            color: #fff;
             
             }
 
@@ -176,8 +185,8 @@ article{
     .article-offer{
         padding: 10% 0 0 0;
         display: flex;
-        justify-content: space-between;
-        width: 100%;
+        
+        max-width: 100%;
         
 
         .article-offer-contain{
