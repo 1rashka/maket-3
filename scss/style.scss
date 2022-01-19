@@ -6,6 +6,22 @@
 
 $color-main:#fff;
 
+$scren-lm:375px;
+$scren-sm: 650px;
+$scren-md: 768px;
+$scren-lg: 992px;
+$scren-xl: 1200px;
+
+
+$scren-lm-max:649px;
+$scren-sm-max: 767px;
+$scren-md-max: 991px;
+$scren-lg-max: 1199px;
+
+
+
+
+
 
 .sub-title{
             
@@ -143,59 +159,78 @@ body{
                     
                 }
             }
+
+            @media (max-width: $scren-lm-max){
+                flex-direction: column;
+        
+                input{
+                    margin: 0 0 20px 0;
+                } 
+            }
       
     }
 
 
 
   }
-
 }
 
 .promo{
-    padding: 100px 0 100px 0;
+        padding: 100px 0 100px 0;
 
-
-    .promo-wrapper{
-    
-    display: flex;
-    color: #414141;
-
-
-        .promo-text{
-            padding: 0 90px 0 0 ;
-            flex-basis: 50%;
-            
-            
+        .promo-wrapper{
         
-            .title{
+        display: flex;
+        color: #414141;
 
-                font-size: 32px;
-                font-weight: 700;
-                line-height: 51px;
+
+            .promo-text{
+                
+                
+                
+                
+            
+                .title{
+
+                    font-size: 32px;
+                    font-weight: 700;
+                    line-height: 51px;
+                    
+
+                }
+              
 
             }
-            .text{
-                width: 75%;
+            .promo-video{ 
+                
+                img{
+                    
+                width: 100%;
+                height: auto;
+                }
             }
-
-        }
-        .promo-video{
-            flex-basis: 50%;
-            
-            
-            img{
+            @media (max-width: $scren-sm-max){
+                flex-direction: column;
         
-            width: 100%;
-            height: auto;
+                .promo-video {
+                    margin-bottom: 20px;
+                    order: -1;
+                }      
             }
+
+            @media (min-width: $scren-md){
+        
+            .promo-text{
+                padding: 0 90px 0 0 ;
+                flex-basis: 50%;
+            }
+            }
+            
     
-        }
-    }
-
-
-
 }
+  
+}
+
 
 
 .offer{
@@ -209,13 +244,23 @@ body{
     .offer-wrapper{
      
         display: flex;
+
+      
+    
+
+        .offer_contain{
+            text-align: center;
+
+
+        }
+
+        @media (max-width: $scren-lm-max){
+            
+            flex-direction: column; 
+               
+        }
+
     }
-
-    .offer-contain{
-        text-align: center;
-
-    }
-
 }
 
 
@@ -236,6 +281,7 @@ body{
             
 
             img{
+               
                 width: 100%;
                 height: auto; 
                 
@@ -244,8 +290,7 @@ body{
 
         .about-text{
             align-self: center;
-            padding: 0 0 0 50px;
-            flex-basis: 53%;
+        
             
            
            
@@ -272,6 +317,21 @@ body{
             line-height: 29px;
 
         }
+
+        @media (max-width: $scren-sm-max){
+            flex-direction: column;
+            .about-img{
+               align-self: center;
+            } 
+        }
+        @media (min-width: $scren-md){
+    
+            .about-text{
+                padding: 0 0 0 50px;
+                flex-basis: 53%;
+            }
+            
+        }
     }
 }
 
@@ -281,13 +341,10 @@ body{
     margin:  0 auto;
     }
     .plan-content{
-        
-       
-      
         text-align: center;
+        
 
         .plan-text{
-            
             
             .title{
                 color: #414141;
@@ -296,7 +353,6 @@ body{
                 line-height: 51px;
                 
             }
-
             .sub-title{
                 color: #6c6c6c;
                 font-size: 16px;
@@ -311,14 +367,30 @@ body{
     }
     .plan-type{
        display: flex;
+       margin: 0 0 50px 0;
        
-       justify-content: center;
+       
+       
 }
     
        
        .plan-type-contain{
-        margin: 3%;
-        padding: 8% 3% ;
+           
+       
+      
+      .plan-text{
+        width: 85%;
+        margin: 0 auto;
+      }
+      @media (max-width: $scren-sm-max){
+  
+    }
+        @media (min-width: $scren-md){
+            padding: 40px 20px;
+     
+        
+    }
+        
     }
 
         .plan-type-contain:hover{
@@ -336,15 +408,15 @@ body{
             font-weight: 700;
             line-height: 17px;
             text-transform: uppercase;
-            margin: 0 0 3% 0;
+            margin: 0 0 35px 0;
+
         }
 
         .price-contain{
-            display: flex;
-            justify-content: center;
-            align-items:flex-end;
-            padding: 0 0 15px 0;
-
+          
+            padding: 0 0 25px 0;
+           
+            
             .cost{
                 
                 color: #fe4fa7;
@@ -376,7 +448,7 @@ body{
                     background: #fff;
                     border: 1px solid #979797;
                     color: #414141;
-                    font-family: Lato;
+                    
                     font-size: 18px;
                     font-weight: 400;
                     line-height: 22px;
@@ -428,76 +500,27 @@ body{
                            border:none;
                        }
                    }
+
+                   @media (max-width: $scren-sm-max){
+  
+                }
+                    @media (min-width: $scren-md){
+                
+                 
+                    
+                }
+                   
                 }
            
- footer{
-    width: 700px;
-    margin: 0 auto;
-    text-align: center;
-    .footer-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        min-height:30vh ;
-        
-        a{
-            color: #464646;
-            font-size: 24px;
-            font-weight: 700;
-        }
-    }
 
-    .nav{
-
-        ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-
-        a{
-            text-transform: uppercase;
-            color: #464646;
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 20px;
-            }
-            a:hover{
-                color:#FE50A6
-           
-        }
-        
-     }
-   
-   
-    } 
-    
-    .list{
-        ul{
-       display: flex;
-       flex-direction: row;
-       justify-content: space-around;
-        }
-        a{
-            color: #464646;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 17px;
-        }
-        a:hover{
-            text-decoration: underline;
-        }
-   }   
-}
 
 
 .footer{
-   padding: 100px 0 20px 0;
+    padding: 100px 0 20px 0;
     text-align: center;
     .footer-content{
         display: flex;
         flex-direction: column;
-        
-        
         
         a{
             color: #464646;
@@ -505,20 +528,15 @@ body{
             font-weight: 700;
         }
     }
-
     .nav{
         padding: 50px 0 0 0;
-        display: flex;
-        justify-content: center;
+        margin: 0 auto;
+        
 
         ul{
         display: flex;
-            li+li{
-                padding: 0 0 0 60px;
-            }
-
         
-        
+          
 
         a{
             text-transform: uppercase;
@@ -531,23 +549,44 @@ body{
                 color:#FE50A6
            
         }
+
+
+
         
      }
-   
-   
-    } 
-    
-    .list{
-        margin: 30px 0 0 0;
-        display: flex;
-        justify-content: center;
+     @media (max-width: $scren-sm-max){
 
+            
         ul{
-       display: flex;
-       li+li{
-        padding: 0 0 0 40px;
-    }
+           
+           li+li{
+               padding: 0 0 0 20px;
+           }
+       
+        }  
 
+    }
+    @media (min-width: $scren-md){
+        
+        ul{
+            li+li{
+                padding: 0 0 0 40px;
+            }
+            }
+        
+}
+    
+ } 
+    
+
+
+
+    .list{
+        margin:  0 auto;
+        padding: 30px 0 0 0;
+     
+            ul{
+        display: flex;
       
         }
         a{
@@ -559,5 +598,43 @@ body{
         a:hover{
             text-decoration: underline;
         }
-   }   
-}
+
+        @media (max-width: $scren-sm-max){
+
+            
+                ul{
+                    li:first-child{
+                        margin: 0 20px 0 0;
+                    }
+                   li+li{
+                       padding: 0 0 0 10px;
+                   }
+               
+                }  
+      
+    }
+    
+    }
+
+
+
+        @media (min-width: $scren-md){
+        
+            ul{
+                 li:first-child{
+                     margin: 0 40px 0 0;
+                 }
+                li+li{
+                    padding: 0 0 0 30px;
+                }
+                }
+            
+    }
+   }  
+
+
+  
+
+
+
+
